@@ -10,5 +10,8 @@ CREATE TABLE IF NOT EXISTS variants(
    ,end_coord      INT UNSIGNED NULL
    ,variant_type   ENUM('SNV', 'MNV', 'INS', 'DEL', 'INDEL')
 
-   ,INDEX genomic_location (chromosome, genomic_coord, ref_allele_seq, alt_allele_seq)
+   ,INDEX genomic_location ( chromosome
+                            ,genomic_coord
+                            ,ref_allele_seq
+                            ,alt_allele_seq)
 );
